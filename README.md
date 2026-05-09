@@ -23,7 +23,31 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 [Linear regression](#linear-regression)
 
+### Linear Regression
+Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
+The main aim is to find the best‑fitting straight line (or hyperplane) that minimizes the difference between the predicted values and the actual values.
+Working:
 
-Linear regression: Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables. 
+Data Representation:
+Each data point (for example, a house) is represented in a 2D space, where the size is on the x‑axis and the price is on the y‑axis.
 
-Aim is to find the best-fitting string line or hyperplan that minimize the difference between the predicted values and the actual value. 
+Finding the Regression Line:
+The algorithm determines the line that minimizes the sum of squared errors, commonly using the least squares method.
+
+Equation of the Line:
+Price=m×Size+c\text{Price} = m \times \text{Size} + cPrice=m×Size+c
+where m is the slope and c is the intercept.
+
+Prediction:
+Once the line is learned, it can be used to predict the price of a new house based on its size.
+
+Advantages:
+
+Simple and easy to understand
+Interpretable: The coefficients explain the relationship between variables.
+Computationally efficient: Training and prediction are fast.
+
+Limitations:
+
+Assumes linearity: Not suitable for non‑linear relationships.
+Sensitive to outliers: Extreme values can significantly affect the regression line.
