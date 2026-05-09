@@ -556,22 +556,22 @@ It is use mostly when you need to balance between precision and recall, especial
 ### Mean square error
 (MSE) - It averages the squared difference between predicted and actual value. 
 		
-		MSE <img width="98" height="38" alt="image" src="https://github.com/user-attachments/assets/429b5d6b-c6fe-4798-a5a7-39b3d7f58494" />
+<img width="98" height="38" alt="image" src="https://github.com/user-attachments/assets/429b5d6b-c6fe-4798-a5a7-39b3d7f58494" />
 
 ### Mean absolute error
 (MAE) - It averages the absolute difference between predicted and actual value. 
 
-		MAE =<img width="87" height="41" alt="image" src="https://github.com/user-attachments/assets/fad6e8ab-aea8-4e10-b6aa-bd4eff7e7730" />
+<img width="87" height="41" alt="image" src="https://github.com/user-attachments/assets/fad6e8ab-aea8-4e10-b6aa-bd4eff7e7730" />
 
 		
 ### Root mean square error
 (RMS) - It measures the average magnitude of the errors between predicted and actual values.
 	
-	RMSE = <img width="130" height="50" alt="image" src="https://github.com/user-attachments/assets/93b71f68-416d-414f-949b-79cf87463a14" />
+<img width="130" height="50" alt="image" src="https://github.com/user-attachments/assets/93b71f68-416d-414f-949b-79cf87463a14" />
 
 
 ### R-Square
 R2 - Co-efficient of determination (COD) - It represent the goodness of fit of a regression model. The R value lies between 0 and 1. Where 1 represent when model perfectly fits the data and there is no difference between predicted and actual value. Where 0 represent the model does not predict any variable in the model and it does not learn any relationship between the dependant and independent variable. 
 
-		R2 = <img width="212" height="56" alt="image" src="https://github.com/user-attachments/assets/67e1b8d9-3eda-4e50-9487-6eb898fa417d" />
+<img width="212" height="56" alt="image" src="https://github.com/user-attachments/assets/67e1b8d9-3eda-4e50-9487-6eb898fa417d" />
 
