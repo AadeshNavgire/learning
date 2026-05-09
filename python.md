@@ -1,4 +1,51 @@
 
+# Python & Web Development Complete Notes
+
+## Table of Contents
+
+| Concept | Concept | Concept |
+|---------|---------|---------|
+| [__init__ Method](#__init__-method) | [Access Modifiers](#access-modifiers) | [Aggregation](#aggregation) |
+| [Aggregation vs Composition](#aggregation-vs-composition) | [args and kwargs](#args-and-kwargs) | [Array](#array) |
+| [Async](#async) | [Asyncio vs Multithreading](#asyncio-vs-multithreading) | [BaseModel in FastAPI](#basemodel-in-fastapi) |
+| [Break](#break) | [ChatGPT Architecture](#chatgpt-architecture) | [Class](#class) |
+| [CORS in FastAPI](#cors-in-fastapi) | [Conflict](#conflict) | [Continue](#continue) |
+| [Database Connections in Flask](#database-connections-in-flask) | [Deadlock](#deadlock) | [Decorators](#decorators) |
+| [Deep Copy](#deep-copy) | [del vs remove()](#del-vs-remove) | [Dictionary](#dictionary) |
+| [Dictionary Comprehension](#dictionary-comprehension) | [Dynamic Programming Language](#dynamic-programming-language) | [Error Handling in FastAPI](#error-handling-in-fastapi) |
+| [FastAPI](#fastapi) | [FastAPI vs Flask](#fastapi-vs-flask) | [File Uploading in Flask](#file-uploading-in-flask) |
+| [Filter](#filter) | [Flask](#flask) | [Flask-WTF](#flask-wtf) |
+| [Function](#function) | [Garbage Collection](#garbage-collection) | [Generators](#generators) |
+| [Getter and Setter](#getter-and-setter) | [Git](#git) | [Git Add](#git-add) |
+| [Git Apply](#git-apply) | [Git Checkout](#git-checkout) | [Git Clone](#git-clone) |
+| [Git Commit](#git-commit) | [Git Fetch](#git-fetch) | [Git Push](#git-push) |
+| [Git Pull](#git-pull) | [Git Reset](#git-reset) | [Git Revert](#git-revert) |
+| [Git Stash](#git-stash) | [Git Status](#git-status) | [.gitignore](#gitignore) |
+| [Global Interpreter Lock](#global-interpreter-lock) | [HTTP Methods](#http-methods) | [Inheritance](#inheritance) |
+| [Inheritance Types](#inheritance-types) | [Interpreted Language](#interpreted-language) | [Lambda](#lambda) |
+| [Library](#library) | [List](#list) | [List Comprehension](#list-comprehension) |
+| [List vs Array](#list-vs-array) | [List vs Tuple](#list-vs-tuple) | [Map](#map) |
+| [Memory Management](#memory-management) | [Method Overloading](#method-overloading) | [Method Overriding](#method-overriding) |
+| [Method Overriding vs Method Overloading](#method-overriding-vs-method-overloading) | [Module](#module) | [Multiprocessing](#multiprocessing) |
+| [Multithreading](#multithreading) | [Multithreading vs Multiprocessing vs Async](#multithreading-vs-multiprocessing-vs-async) | [Mutex](#mutex) |
+| [NoneType](#nonetype) | [OAuth](#oauth) | [Object](#object) |
+| [Overloading](#overloading) | [Package](#package) | [Parameter](#parameter) |
+| [Pass](#pass) | [Pydantic in FastAPI](#pydantic-in-fastapi) | [Private Methods](#private-methods) |
+| [Race Condition](#race-condition) | [Range](#range) | [Reduce](#reduce) |
+| [Regular Expression](#regular-expression) | [Repository](#repository) | [Request and Response Objects](#request-and-response-objects) |
+| [Route in FastAPI](#route-in-fastapi) | [Routing in Flask](#routing-in-flask) | [Schema in FastAPI](#schema-in-fastapi) |
+| [Self](#self) | [Semaphore](#semaphore) | [Set](#set) |
+| [Shallow Copy](#shallow-copy) | [Singleton Class](#singleton-class) | [@staticmethod](#staticmethod) |
+| [Super](#super) | [Template Inheritance in Flask](#template-inheritance-in-flask) | [Ternary Operator](#ternary-operator) |
+| [Thread](#thread) | [Thread-local Object in Flask](#thread-local-object-in-flask) | [Try-Except-Else-Finally](#try-except-else-finally) |
+| [Tuple](#tuple) | [Type Conversion vs Type Casting](#type-conversion-vs-type-casting) | [url_for in Flask](#url_for-in-flask) |
+| [VCS (Version Control System)](#vcs-version-control-system) | [Ways to Edit Tuple](#ways-to-edit-tuple) | [While Loop](#while-loop) |
+| [Why Sets Store Only Unique Objects](#why-sets-store-only-unique-objects) | [WSGI](#wsgi) | [WSGI vs ASGI](#wsgi-vs-asgi) |
+
+---
+
+
+
 
 | Concept | Link | Category |
 |---------|------|----------|
