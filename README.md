@@ -85,6 +85,8 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 [Batch Gradient Descent vs Stochastic Gradient Descent](#batch-gradient-descent-vs-stochastic-gradient-descent)
 
+[Bagging vs bossting](#bagging-vs-bossting) [L1 vs L2](#l1-vs-l2)
+
 
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
@@ -812,11 +814,12 @@ A statistical measure that helps to understand the spread of data by forcing on 
 
 ### Bernoulli Distribution vs Binomial Distribution
 
-| Aspect | Bernoulli Distribution | Binomial Distribution || Aspect | Bernoulli trial | Fixed number of trials (n) |
-| Possible Outcomes | Two outcomes (Success or Failure) | Counts number of successes |
+| Aspect | Bernoulli Distribution | Binomial Distribution |
+|------|------------------------|----------------------|
+| Number of Trials | Single trial | Fixed number of trials (n) |
+| Possible Outcomes | Two outcomes (Success or Failure) | Number of successes |
 | What it Models | Result of a single experiment | Number of successes in n trials |
 | Parameters | One parameter: p (probability of success) | Two parameters: n (number of trials) and p (probability of success) |
-|------|------------------------|----------------------|
 
 
 ### Loss Function vs Cost Function
@@ -836,4 +839,25 @@ A statistical measure that helps to understand the spread of data by forcing on 
 | Data Usage | Uses all data points | Uses one data point at a time |
 | Speed | Slower for large datasets | Faster, especially for large datasets |
 | Memory Requirement | Requires high memory | Requires less memory |
+
+
+### Bagging vs bossting
+
+| Aspect | Bagging | Boosting |
+|------|---------|----------|
+| Approach | Parallel approach | Sequential approach |
+| Main Purpose | Reduce variance | Reduce bias and variance |
+| Overfitting Risk | Low | High |
+| Learning Style | Models are trained independently | Each model learns from previous errors |
+| Examples | Random Forest | AdaBoost, Gradient Boosting |
+
+### L1 vs L2
+
+| Aspect | L1 (Lasso) | L2 (Ridge) |
+|------|------------|------------|
+| Effect on Coefficients | Drives some coefficients exactly to zero | Shrinks coefficients toward zero but not exactly zero |
+| Feature Selection | Performs automatic feature selection | Keeps all features |
+| Model Sparsity | Produces sparse models | Produces dense models |
+| Suitable For | High-dimensional data where feature selection is needed | Multicollinearity situations where all features are useful |
+``
 
