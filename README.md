@@ -39,6 +39,21 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 [LSTM](#lstm)
 
+[Entropy](#entropy)
+
+[Loss function](#loss-function)
+
+[Cost function](#cost-function)
+
+[K-Nearest Neighbors](#k-nearest-neighbors)
+
+[Random forest](#random-forest)
+
+[Support Victor machine](#support-Victor-machine)
+
+[Decision tree](#decision-tree)
+
+[Naive Bayes](#naive-bayes)
 
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
@@ -190,6 +205,127 @@ Two outcome vs Number of success in n trails
 
 One parameter p(probability of success) vs Two parameters n (number of trails) & p (probability of success) 
 
-### LSTM (Long Short‑Term Memory) 
-is a type of recurrent neural network (RNN) that can learn and remember information over long sequences.
+### LSTM 
+
+(Long Short‑Term Memory) is a type of recurrent neural network (RNN) that can learn and remember information over long sequences.
 It uses special gates to decide what information to remember, update, or forget, making it useful for tasks like time series, speech, and text prediction
+
+Architecture of LSTM contain 3 main components - Cell state, Gates, Hidden state. 
+
+<img width="464" height="239" alt="image" src="https://github.com/user-attachments/assets/6a59e0d0-6c81-4390-b07c-ccf823ee16d6" />
+
+Working - 
+Forget gate: The LSTM decides which part of the cell state. 
+			Use sigmoid activation function.
+Input gate: Determine which information should add to the cell state. 
+		      A sigmoid activation function decide the importance of new information
+		     A tanh generate candidate values for that state
+Update gate: Determine the output at this time step
+Hidden state: This state is update using output gate and cell state.
+
+### Entropy
+Entropy is a measure of uncertainty or impurity in a random variable.
+It depends on how the probabilities are distributed.
+Key Properties:
+
+Maximum Entropy:
+Entropy is highest when all outcomes have equal probability (maximum uncertainty).
+Zero Entropy:
+Entropy is zero when the outcome is completely certain, meaning there is no uncertainty.
+
+Entropy is commonly used in decision trees to check how well the data is split.
+
+Cross Entropy
+Cross entropy measures the difference between two probability distributions:
+
+The true distribution
+The predicted distribution
+
+It is mainly used as a loss function to measure how well a classification model is performing, especially in binary and multi‑class classification tasks.
+
+Binary Cross Entropy
+Binary cross entropy is used when there are only two classes.
+
+It compares true labels with predicted probabilities.
+Because it uses a logarithmic function, wrong predictions are penalized more, which helps the model improve accuracy during training.
+
+
+Categorical Cross Entropy
+Categorical cross entropy is an extension of binary cross entropy.
+
+It is used for multi‑class classification problems.
+It is applied when there are more than two classes.
+
+
+
+### Loss function
+It calculates the error for a single training example. It measures the difference between the predicted output and the actual target value for that specific example. 
+
+Goal - To minimize the error on each individual prediction. 
+
+### Cost function
+It calculates the average loss over the entire training dataset. It sum of all the individual loss function values divided by the number of training example. 
+
+Goal - To find the model parameters that minimize the overall error across the entire dataset. 
+
+
+
+### K-Nearest Neighbors
+KNN is a simple and non-parametric ML algorithm used for classification and regression tasks. It predicts the class or value of the data points based on its l closest neighbors in the feature space.
+In simple language - Imaging you move into a new neighborhood and want to know what people like to eat. You ask your k-nearest neighbor to take the majority options. 
+Feature of KNN - 1) KNN does not learn during the training, it stores the data and makes predictions during inference. 
+2) Distance metric - Common once include euclidean. 
+3) Choice of K - A small K can be noisy & large K smooth predictions but might overlook local patterns. 
+
+### Naive Bayes
+It assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. 
+It is a probabilistic machine learning algorithm based on Bayes theorem. 
+
+Example - You have a basket of fruits with an apple and orange with below characteristics. 
+Color - Red, Orange, Green
+Shape - Round, Oval
+Texture - Smooth, Rough
+Now, you have a new fruit that is red, round and smooth. A native bayes classifier would figure out if this is more likely an apple or an orange. 
+It assumes the feature (color, shape, texture) are independent of each other. In reality, a red fruit might be slightly more likely to be round. But Navie bayes ignores this potential connection, keeping things simple. 
+
+Naive bayes is a probabilisting classifier that is often employed when you have multiple or more than two classes in which you want to place your data. This algorithm is particularly used when you are dealing with text classification with a large dataset and many features. 
+
+### Decision tree
+It visually and explicitly represents decisions and their possible consequences. Each internal node of the tree represent a test on an attribute, each branch represent the outcome of the test and each leaf node represent a class label (For classification) or prediction value (for regression).
+Advantages:-
+Easy to understand and interpreter- The trees structure is usually intuitive 
+It can handle both numerical and category data 
+requires little data preparation and often needs less processing than other algorithms. 
+
+Limitation:- 
+Can overfit training data to poor generalisation to new data this can mitigate with pruning technique. 
+sensitive to small changes in data can result in different trees and unstable predictions
+can bias towards features with many categories. 
+
+### Support Victor machine
+Is to find an optimal hyperplane that maximally separates data points into different classes.
+
+Advantages: Effective in high- dimensional space work well even with many features. 
+versatility can handle both linear and non linear data using different kernels.
+memory efficiently uses only a subset of the training data in the decision function.
+
+Limitations: Can be computationally expensive, training can be slow for large datasets.
+Sensitive to the choice of kernel - Selecting the appropriate kernel can be crucial for performance. 
+Not easily interpretable - The decision boundary can be complex, making it harder to understand the reasoning behind predictions. 
+
+### Random forest
+Its machine learning algorithm that operates by constructing a multiple of decision trees at training time and outputting the class that is the mean of the individual trees. 
+
+Advantages - 1) High accuracy. 2) Robust to overfitting - The ensemble approach reduces the risk of overfitting to the training data. 3) Handle high dimensionality - can effectively deal with dataset with many features. 4) Handles high dimensionality - can effectively deal with dataset with many feature. 5) Provides feature importance - Can identify which feature are most important for prediction. 
+
+Limitations - 1) Can be complex - The model can be difficult to interpret compared to a single decision tree. 2)  Can be computationally expensive - Training and prediction can take longer than simpler model. 3) Requires careful tuning - Parameter like the number of trees and features need to be optimized for best performance. 
+
+### K Nearest Neighbors
+It classifies data points based on how its neighbors are classified ‘k’ representing the number of nearest neighbors. 
+
+Working - 1) Calculate distance - KNN calculates the distance between the new data point and all other data point in the dataset. Common distance measure include euclidean distance. 
+2) Find nearest neighbors - It identifies the K nearest data points to the new data point based on the calculated distance. 3) Classify - In classification the algorithm assign the new points to the class that is most frequent among its nearest neighbors. 
+
+Advantages - 1) Simple and easy to understand. The concept is straightforward and easy to implement. 2) No training period- KNN is a lazy learner, meaning it doesn't explicitly learn a model from the training data. It simply memories the data and uses it for prediction. 3) Versatile - Can be used for classification and regression. 4) Non-parametric - Makes no assumption about the underlying data distribution. 
+
+Limitation - 1) Computationally expansive - Calculating distance for all data points can be time consuming especially for large dataset. 2) Sensitive to irrelevant feature - Including irrelevant feature can negatively impact performance feature selection is crucial. 3) Curse of dimensionality - Performance can degrade in high dimensional space. 
