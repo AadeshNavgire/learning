@@ -99,7 +99,8 @@ A smooth S-shaped function that maps inputs to a range between 0 & 1, use for pr
 <img width="80" height="32" alt="image" src="https://github.com/user-attachments/assets/d8ccf227-0f60-4ef4-91d2-6a0b7137edfe" />
 
 
-Pros - Good for output representing probabilities. Well suited for binary classification problem. 
+Pros - Good for output representing probabilities. Well suited for binary classification problem.
+
 Cons - Vanishing Gradient problem - Gradients become very small for large/small input slowing training. Output not centered around zero, which can affect convergence. 
 
 When to use - In the output layer of the binary classification model. 
@@ -112,7 +113,8 @@ A sigmoid like function that maps inputs to a range between -1 and 1 centered at
 <img width="141" height="33" alt="image" src="https://github.com/user-attachments/assets/e6578bb4-8d04-4b99-835c-f8fdc3a37d69" />
 
 
-Pros - Centered at zero which helps with faster convergence compared to sigmoid. Handles negative input better than sigmoid. 
+Pros - Centered at zero which helps with faster convergence compared to sigmoid. Handles negative input better than sigmoid.
+
 Cons - Sufferers from the vanishing gradient problem for large inputs, though less severe than sigmoid. 
 
 When to use - In hidden layer when input may have a mean close to zero. 
@@ -141,6 +143,7 @@ Converts a vector of logits into a probability distribution, where each output l
 
 	
 Pros: Suitable for multi class classification report. Output interpretable probabilities. 
+
 Cons: Not used in hidden layers. Sensitive to large values in input logics (May require normalization) 
 
 When to use: Output layer for multi-class classification models. 
