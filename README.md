@@ -21,7 +21,7 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 ## Machine learning
 
-[Linear regression](#linear-regression)  
+[Linear regression](#linear-regression)  			[Random forest](#random-forest)
 
 [Neural network](#neural-network)
 
@@ -54,6 +54,10 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 [Decision tree](#decision-tree)
 
 [Naive Bayes](#naive-bayes)
+
+[Global minima](#global-minima)
+
+[Local minima](#local-minima)
 
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
@@ -329,3 +333,47 @@ Working - 1) Calculate distance - KNN calculates the distance between the new da
 Advantages - 1) Simple and easy to understand. The concept is straightforward and easy to implement. 2) No training period- KNN is a lazy learner, meaning it doesn't explicitly learn a model from the training data. It simply memories the data and uses it for prediction. 3) Versatile - Can be used for classification and regression. 4) Non-parametric - Makes no assumption about the underlying data distribution. 
 
 Limitation - 1) Computationally expansive - Calculating distance for all data points can be time consuming especially for large dataset. 2) Sensitive to irrelevant feature - Including irrelevant feature can negatively impact performance feature selection is crucial. 3) Curse of dimensionality - Performance can degrade in high dimensional space. 
+
+
+### Global minima
+It is the absolute lowest point of a loss function, where a ML model achieves optimal performance. 
+
+### Local minima
+A point where the function value is lower than all nearby points, but may not be the lowest overall. 
+Global minima - The lowest point of the entire function across its entire domain. 
+Local maxima - A point where the function value is higher than all nearby points but may not be the highest overall. 
+Global maxima - The highest point of the entire function across its entire domain. 
+In Optimization algorithms (gradient descent) often get stuck at local minima instead of reaching the global minimum, which is why initialization and learning rate matter. 
+
+
+
+### Random forest
+Is a method that uses bagging with decision trees. It builds multiple decision trees on different subsets of the data and combines their prediction (by averaging) to improve accuracy and reduce overfitting. 
+
+In simple language - Its like asking multiple experts for advice and taking the average of their opinions to make a decision. 
+
+Working:- 1. Bootstrap aggregating - Random forest creates multiple subset of the original data through random sampling with replacement. 
+2. Feature randomness - For each tree, a random subset of feature is selected to determine the best split at each node. 
+3. Building - Each subset is used to build a decision tree, typically without pruning. 
+4. Aggregation - The predictions from al the tree are combined to produce the final prediction. 
+
+### AdaBoosting
+(Adaptive boosting)Adaboost combines multiple weak learners sequentially. Each new learner focus on correcting the error made by the previous once and weights are assigned to prioritize difficult. 
+Example - 1) Start with an easy question. 2) Focus on the questions the student got wrong in the next lesson. 3) Repeat unit the student performs well on all questions. 
+
+### Gradient boosting
+It builds model sequentially with each new model minimizing the residual error of the previous model. It uses gradient descent to optimize the loss function. 
+Use gradient boosting where accuracy is critical and you have a moderate size dataset with complex patterns. 
+
+### XGBoost
+Extreme Gradient boosting - XGBoost is an optimized implementation of the gradient boosting algorithm designed to be fast efficient and scalable. 
+
+### Gradient descent
+Is an optimization algorithm used to minimize a function by iteratively moving in the direction of the steepest descent as defined by the negative of the gradient. 
+ It is use to find out the best solution or optimal parameter of a model. 
+Its a concept of a global minima where loss is minimum. 
+Learning rate is the steps to find out the global minima. 
+Example - You are standing at the top of the hill. You want to reach the lowest point (global minimum). So, you will take small steps, step by step, to reach the lowest point (learning rate). This entire process is called Gradient Descent.
+
+Batch Gradient descent - It uses all data points to compute the gradient before updating the model. It accurate gradients. It can be slow and computationally expensive for large dataset. 
+Stochastic Gradient descent(SGD) - It uses one data point a time to compute and update the gradient. It is faster for larger dataset, required less memory but noisy updates can make convergence slower or cause oscillations. 
