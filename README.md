@@ -670,8 +670,9 @@ It helps us to remove number of feature from dataset while trying to keep the im
 
 ### Receiver operating character
 ROC Is a graphical representation used to evaluate the performance of binary classification model to show sensitivity (TPR - True positive rate) and specificity (False positive rate) across different threshold value. 
-	TPR - True positive\True positive + False negative      	
-	FPR - False positive\False positive + True negative
+		TPR - True positive\True positive + False negative 
+		
+		FPR - False positive\False positive + True negative
 
 ### Area under curve
 AUC Is a single value that summarizes the performance of the classifier. It represents the probability that the classifier will rank. 
