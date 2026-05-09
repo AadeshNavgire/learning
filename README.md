@@ -23,7 +23,7 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 [Linear regression](#linear-regression)  [Neural network](#neural-network)
 [Weights](#weights)[Bias](#bias)
-[working on neural network](#working-of-neural-network)
+[Working of a Neural Network](#working-of-a-neural-network)
 
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
