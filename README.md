@@ -61,6 +61,8 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 [Accuracy](#accuracy) [Precision](precision) [Recall](#recall)  [F1 Score](#f1-score)
 
+[Mean square error](#mean-square-error) [Mean absolute error](#mean-absolute-error) [Root mean square error](#root-mean-square-error) [R-Square](#r-square)
+
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
 The main aim is to find the best‑fitting straight line (or hyperplane) that minimizes the difference between the predicted values and the actual values.
@@ -524,7 +526,7 @@ cosine similarity = A.B \ ||A|| ||B||
 ### Accuracy
 The correctly classified instance to the total instance. 
 
-	Accuracy = True positive (TP) + True negative (TN)Total Instance
+	Accuracy = True positive (TP) + True negative (TN)\Total Instance
 
 Accuracy is used when the dataset is balanced. I.e. the classes have similar proportions. 
 Example - Predicting student pass/ failed outcomes in an evenly distributed dataset. 
@@ -532,21 +534,44 @@ Example - Predicting student pass/ failed outcomes in an evenly distributed data
 ### Precision
 The proportion of correctly predicted positive observations to the total predicted positive observations. 
 
-Precision = True Positive (TP)True positive (TP) + False positive(FP)
+	Precision = True Positive (TP)\True positive (TP) + False positive(FP)
 
 It is use when false positives are costly and in email spam detection, falsely making a legitimate email as spam is undesirable. 
 
 ### Recall
 The proportion of correctly predicted positive observations to all actual positive observations. 
 
-	Recall = True positive (TP)True positive (TP) + False negative (FN)
+	Recall = True positive (TP)\True positive (TP) + False negative (FN)
 
 It use when false negative are costly or critical to avoid. In medical diagnosis, missing a disease case (false negative) can be life threatening. 
 
 ### F1 Score
 It is harmonic meaning od precision and recall. 
 
-	F1 score = 2Precision X RecallPrecision + Recall = TPTP + 12(FP+FN)
+	F1 score = 2Precision X Recall\Precision + Recall = TP\TP + 1\2(FP+FN)
 
 It is use mostly when you need to balance between precision and recall, especially for imbalance dataset.
+
+
+### Mean square error
+(MSE) - It averages the squared difference between predicted and actual value. 
+		
+		MSE <img width="98" height="38" alt="image" src="https://github.com/user-attachments/assets/429b5d6b-c6fe-4798-a5a7-39b3d7f58494" />
+
+### Mean absolute error
+(MAE) - It averages the absolute difference between predicted and actual value. 
+
+		MAE =<img width="87" height="41" alt="image" src="https://github.com/user-attachments/assets/fad6e8ab-aea8-4e10-b6aa-bd4eff7e7730" />
+
+		
+### Root mean square error
+(RMS) - It measures the average magnitude of the errors between predicted and actual values.
+	
+	RMSE = <img width="130" height="50" alt="image" src="https://github.com/user-attachments/assets/93b71f68-416d-414f-949b-79cf87463a14" />
+
+
+### R-Square
+R2 - Co-efficient of determination (COD) - It represent the goodness of fit of a regression model. The R value lies between 0 and 1. Where 1 represent when model perfectly fits the data and there is no difference between predicted and actual value. Where 0 represent the model does not predict any variable in the model and it does not learn any relationship between the dependant and independent variable. 
+
+		R2 = <img width="212" height="56" alt="image" src="https://github.com/user-attachments/assets/67e1b8d9-3eda-4e50-9487-6eb898fa417d" />
 
