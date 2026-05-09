@@ -21,43 +21,45 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 ## Machine learning
 
-[Linear regression](#linear-regression)  			[Random forest](#random-forest)
+[Linear regression](#linear-regression)  	[Random forest](#random-forest) 	[Decision trees](#decision-trees)
 
-[Neural network](#neural-network)
+[Neural network](#neural-network)		[AdaBoosting](#adaBoosting)		[classification](#classification)
 
-[Weights](#weights)[Bias](#bias)
+[Weights](#weights)[Bias](#bias)	[Gradient boosting](#gradient-boosting)		[Logistic regression](#logistic-regression)
 
-[Working of a Neural Network](#working-of-a-neural-network)
+[Working of a Neural Network](#working-of-a-neural-network) 	[XGBoost](#xGBoost)		[Regression](#regression)
 
-[Activation function](#activation-function)
+[Activation function](#activation-function)		[Gradient descent](#gradient-descent)		[Linear regression](#linear-regression)
 
-[Normal distribution/Gaussian distribution](#normal-distribution/gaussian-distribution)
+[Normal distribution/Gaussian distribution](#normal-distribution/gaussian-distribution) 	[Polynomial regression](#polynomial-regression)
 
-[Bernoulli distribution](#bernoulli-distribution)
+[Bernoulli distribution](#bernoulli-distribution) 	[Batch Gradient descent](#batch-gradient-descent)
 
-[Binomial distribution](#binomial-distribution)
+[Binomial distribution](#binomial-distribution)		[Stochastic Gradient descent](#stochastic-gradient-descent)
 
-[LSTM](#lstm)
+[LSTM](#lstm) 	[Bagging](#bagging) 	[Regularization](#regularization)
 
-[Entropy](#entropy)
+[Entropy](#entropy) 	[Boosting](#boosting)		[Ridge Regression](#ridge-regression)
 
-[Loss function](#loss-function)
+[Loss function](#loss-function) 	[Bias](#bias)		[Lasso Regression](#lasso-regression)
 
-[Cost function](#cost-function)
+[Cost function](#cost-function)		[Variance](#variance)
 
-[K-Nearest Neighbors](#k-nearest-neighbors)
+[K-Nearest Neighbors](#k-nearest-neighbors) 	[Overfitting](#overfitting)
 
-[Random forest](#random-forest)
+[Random forest](#random-forest)		[Underfitting](#underfitting)
 
-[Support Victor machine](#support-Victor-machine)
+[Support Victor machine](#support-Victor-machine)		[Cross validation](#cross-validation)
 
-[Decision tree](#decision-tree)
+[Decision tree](#decision-tree)		[Covariance](#covariance)
 
-[Naive Bayes](#naive-bayes)
+[Naive Bayes](#naive-bayes)		[One-hot encoding](#one-hot-encoding)
 
-[Global minima](#global-minima)
+[Global minima](#global-minima) 	[Linear Discremental analysis](#linear-discremental-analysis)
 
-[Local minima](#local-minima)
+[Local minima](#local-minima) 		[Cosine similarity](#cosine-similarity)
+
+[Accuracy](#accuracy) [Precision](precision) [Recall](#recall)  [F1 Score](#f1-score)
 
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
@@ -307,6 +309,7 @@ sensitive to small changes in data can result in different trees and unstable pr
 can bias towards features with many categories. 
 
 ### Support Victor machine
+SVM is a supervised machine learning algorithm used for classification and regression tasks. It works by finding the optimal hyperplan that maximizes the margin between different classes in the dataset.
 Is to find an optimal hyperplane that maximally separates data points into different classes.
 
 Advantages: Effective in high- dimensional space work well even with many features. 
@@ -375,5 +378,175 @@ Its a concept of a global minima where loss is minimum.
 Learning rate is the steps to find out the global minima. 
 Example - You are standing at the top of the hill. You want to reach the lowest point (global minimum). So, you will take small steps, step by step, to reach the lowest point (learning rate). This entire process is called Gradient Descent.
 
-Batch Gradient descent - It uses all data points to compute the gradient before updating the model. It accurate gradients. It can be slow and computationally expensive for large dataset. 
-Stochastic Gradient descent(SGD) - It uses one data point a time to compute and update the gradient. It is faster for larger dataset, required less memory but noisy updates can make convergence slower or cause oscillations. 
+### Batch Gradient descent
+It uses all data points to compute the gradient before updating the model. It accurate gradients. It can be slow and computationally expensive for large dataset. 
+
+### Stochastic Gradient descent
+(SGD) It uses one data point a time to compute and update the gradient. It is faster for larger dataset, required less memory but noisy updates can make convergence slower or cause oscillations. 
+
+### Bagging
+(Bootstrap aggregation) Bagging is a technique where multiple models are trained on different random parts of the same dataset, and their results are combined by averaging or voting. 
+
+Bagging is used when high variance models or large datasets with sufficient computational power. 
+
+Bagging models work independently and their results are combined at the end. 
+
+### Boosting
+The models are trained one after another and each new model tries to fix the mistake of the previous once. The results are combined to create a strong final model. 
+
+Boosting is used where data with complex patterns or when you need high accuracy or cases where bias needs to be reduced (Underfitting problem). 
+
+Boosting models work in a sequence learning from each other's mistakes. 
+
+
+### Bias
+Is the error introduced by approximating a real-world problem, which may be too complex with a simplified model. 
+Ex- High bias (underfitting) 
+Predicting student grades based solely on attendance. 
+Mode - A simple linear regression. 
+The model predicts all grades too similarly because it ignores other factors like study habit or exam difficulty. 
+
+### Variance
+Variance refer to the models sensitivity to small changes in the training data. High variance implies that the model captures noise in the data, leading to overfitting. 
+Ex- High variance 
+Predicting student grades based on attendance, mood, time spent on social media. 
+Model - A high- degree polynomial regression. 
+The model fits the training data perfectly but makes poor predictions for new students because it learns irrelevant patterns. 
+
+### Bias-Variance tradeoff
+The bias-variance tradeoff is the balance between bias and variance to minimize the total error on the model. The goal is to create a model that captures patterns in the data without overfitting or underfitting. 
+
+
+
+### Overfitting
+It occurs when a model learns the training data too well, including noise and random fluctuations, rather than generalizing the underlying patterns. As result it performs well on the training data but poorly on unseen test data. 
+
+Example - Imagine you are trying to predict tomorrow's weather using past weather data. Overfitting is like memorizing each day's weather from the past rather than understanding general weather patterns. This makes your prediction only work well for specific days but fail for new, unseen days. 
+
+How to avoid overfitting?
+Regularization - Add penalties to large weights using L1(Lasso) and L2(Ridge) regularization. 
+Use cross validation to monitor model performance on unseen data. 
+
+### Underfitting
+When the model is too simple to capture the underlying structure of the data. It performs poorly on both the training data and test data because it fails to learn the patterns in the data. 
+
+Example - Underfitting is like always predicting ‘sunny’ weather no matter the actual patterns in the data. This overly simple approach fails to capture the nuance of changing weather. 
+
+How to avoid underfitting?
+Switch to a model capable of capturing more patterns (e.g - move from linear regression to polynomial regression) 
+
+### One-hot encoding
+A method to represent a categorical variable as binary vector, where each category is represented as one-hot vector. 
+
+It is used when working with categorical data in model that required numerical input such as logistic regression. 
+
+### Covariance
+It is a statistical method used to find the relationship between two random variables. 
+Cov>0 - Positive: If cov is positive means that one value is increasing wrt another value
+Cov<0 - Negative: If cov is negative means that one value is increasing and another value is decreasing 
+Cov=0 - Zero: There is no relation between two variables. 
+
+cov(x,y) = 1N(xi-x)(yi-y)
+Use: 
+Dimensionality reduction (PCA)
+Feature selection (Regression) 
+Classification (LDA, Naive bayes) 
+Clustering (Gaussian mixture model) 
+Modeling uncertainty(time series) 
+
+### Cross validation
+It is used to assess the performance of a model by dividing the dataset into multiple subset and testing the models ability to generalize the unseen data. 
+
+> Instate of using single train-test split, cross validation will help the model to perform well on different subset of the data, it reduces the risk of overfitting or underfitting. 
+
+How cross validation work.
+> The dataset is split into k subset (folds) 
+> One dataset is used as the validation set and the remaining k-1 subset are used as the training set. 
+> The model is trained on k-1 subset and evaluated on the remaining fold. 
+> This process is repeated k times, with each fold being used as the validation set exactly once. 
+> The performance metric (accuracy, F1) is averaged across all k folds to provide a more reliable estimate of the model performance. 
+
+To compare or select best model or hyperparameter use cross validation. 
+
+### Linear Discremental analysis
+(LDA)Is use to find a linear combination of feature that best separate two or more classes of data. 
+Example- Imagine you have data with different classes (like different types of animals: cats, dogs, and rabbits), and you want to find a way to separate these animals based on their features (like weight, height, and fur length). LDA will help you project these features into a new space where the separation between the classes is as clear as possible, making it easier to classify new data points.
+
+### Cosine similarity
+It calculates the cosine angle between two vector, which tells how similar they are based on direction and their magnitude. 
+
+		cosine similarity = A.B||A|| ||B||
+
+### Decision trees
+A tree like model that splits data based on features values to make decision.
+
+### classification
+Classification is to predict a discrete class label for given input data. 
+
+### Logistic regression
+It predicts the probability of a binary class using the logistic function, such as between 0 and 1, converted to class label (Yes/No). 
+
+
+### Regression
+Regression is a type of supervised learning which is used to predict a continuous output variable based on one or more input features. 
+
+### Linear regression
+A linear relationship between the input feature and the target variable. 
+Use linear regression for simple linear relationship. 
+
+### Polynomial regression
+Extends linear regression by fitting a polynomial curve to capture non-linear relationships. 
+Use polynomial regression for non-linear relationships. 
+
+### Regularization
+It helps prevent the model from overfitting the training data, so it can perform better on new data. 
+Its like a gentle rule that tells the model "don't make things too complicated”
+
+### Ridge Regression
+Shrinks coefficient towards zero but not zero.
+It keep all features but shrkins coefficient
+Multicolinearily, when all features are useful
+A type of linear regression that includes an L2 regularization term to reduce overfitting. 
+Use ridged, lasso for regularization to avoid the overfitting of model. 
+
+
+### Lasso Regression
+It adds L1 regularization which can shrink some coefficient to zero this is more effectively performing feature selection. 
+For dimensionality use lasso regression for feature selection in high-dimensional dataset. 
+It performs automatic feature selection
+
+### Cosine similarity
+It calculates the cosine angle between two vector, which tells how similar they are based on direction and their magnitude. 
+
+cosine similarity = A.B \ ||A|| ||B||
+
+
+### Accuracy
+The correctly classified instance to the total instance. 
+
+	Accuracy = True positive (TP) + True negative (TN)Total Instance
+
+Accuracy is used when the dataset is balanced. I.e. the classes have similar proportions. 
+Example - Predicting student pass/ failed outcomes in an evenly distributed dataset. 
+
+### Precision
+The proportion of correctly predicted positive observations to the total predicted positive observations. 
+
+Precision = True Positive (TP)True positive (TP) + False positive(FP)
+
+It is use when false positives are costly and in email spam detection, falsely making a legitimate email as spam is undesirable. 
+
+### Recall
+The proportion of correctly predicted positive observations to all actual positive observations. 
+
+	Recall = True positive (TP)True positive (TP) + False negative (FN)
+
+It use when false negative are costly or critical to avoid. In medical diagnosis, missing a disease case (false negative) can be life threatening. 
+
+### F1 Score
+It is harmonic meaning od precision and recall. 
+
+	F1 score = 2Precision X RecallPrecision + Recall = TPTP + 12(FP+FN)
+
+It is use mostly when you need to balance between precision and recall, especially for imbalance dataset.
+
