@@ -1,3 +1,18 @@
+[Projects](#projects)
+[Python](#python)
+[Machine learning](#machine-learning)
+[Generative AI](#generative-ai)
+
+
+Projects
+[TSP](#tsp)
+[Content generation](#content-generative)
+[ML based time series analysis](#ml-base-time-series-analysis)
+[Data platform automation](#data-platform-automation)
+
+
+### tsp: Technical sprint specification
+
 1. [Linear regression](#linear-regression)
 
 
