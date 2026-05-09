@@ -63,6 +63,12 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 [Mean square error](#mean-square-error) [Mean absolute error](#mean-absolute-error) [Root mean square error](#root-mean-square-error) [R-Square](#r-square)
 
+[Scaling](#scaling) [Normalization](#normalization) [Ensemble learning](#ensemble-learning)
+
+[Clustering](#clustering) [Evaluation metrics in clustering](#evaluation-metrics-in-clustering)
+
+[Principle component analysis](#principle-component-analysis) [Receiver operating character](#receiver-operating-character) [Area under curve](#Area-under-curve)
+
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
 The main aim is to find the best‑fitting straight line (or hyperplane) that minimizes the difference between the predicted values and the actual values.
@@ -575,3 +581,100 @@ R2 - Co-efficient of determination (COD) - It represent the goodness of fit of a
 
 <img width="212" height="56" alt="image" src="https://github.com/user-attachments/assets/67e1b8d9-3eda-4e50-9487-6eb898fa417d" />
 
+
+
+### Scaling
+The scaling is the process of transforming data into a specific range or unit. 
+It is important when features in the dataset have different unit or magnitude. 
+Ex- one feature might be measured in meters, while another is in kilogram. 
+
+Types of scaling
+1. Standardization(z-score normalization) - It transforms the data to have a mean of 0 and standard deviation of 1. 
+Impact - Is used for models like linear regression, logistic regression, support vector machine (SVM) and principle component analysis (PCA). 
+
+2. Min-max scaling (Normalization) - It rescales the data to a fixed range, usually [0,1]
+Min-max scaling is sensitive to outliner because outliner will stretch the feature range leading to distorted transformation. 
+It is widely used in KNN, neural network and Gradient descent models. 
+
+
+### Normalization
+Adjusting the value in a dataset to fit a specific range. Typically [0,1]
+
+
+
+### Ensemble learning
+Is based on the idea that multiple diverse models working together can reduce errors, improve predictions and increase the robustness of the model. 
+By combining multiple models, ensembles often outperform individual models, especially when the base learners are weak. 
+The variance of the model is reduced by averaging predictions, leading to better generalization on new data. 
+Ensemble models tend to be more robust to noise and outliners than individual models. 
+Ensemble methods can help balance between the trade off between bias and variance. 
+
+
+
+
+### Clustering
+Is a unsupervised learning technique in machine learning in which data points are grouped together based on similarity distance between them. 
+Working:
+Find the number od cluster(K)
+Choose k centroid from the data points randomly 
+Compute the distance between centroid and each data point. 
+Group into k cluster based on the minimum distance between the data points and centroid. 
+Repeat step 3 and 4 until convergence by updating all points. 
+
+Types of clustering: 
+Partitioning methods - It divides the data into k clusters directly. It works by assigning data points to the nearest cluster center, iteratively refining the center.
+	Example - K-Means
+Hierarchical clustering - Builds a hierarchy of cluster using a tree like structure. It works by recursively merge or split clusters based on similarity. 
+	Example - Agglomerative(Bottom-up), Divisive(Top-down) 
+
+Density based method - Identify cluster as region of high-density points. It works by forming cluster where data points are close and leaves out noise or outliers. 
+
+Model based methods - Assumes data is generated from a mixture of distributions and use statistical models to find cluster. It works by fitting the data to multiple probability distribution and assign points based on likelihood. 
+	Example - Gaussian mixture models
+
+Graph based method - Use graph theory to find cluster by treating data points as nodes in a graph. 
+	Example - Spectral clustering
+
+
+
+
+### Evaluation metrics in clustering 
+Silhouette score - Measures how well each data point fits within its cluster compared to other cluster. It ranges -1 (poor clustering) to +1 (good clustering) 
+
+<img width="109" height="36" alt="image" src="https://github.com/user-attachments/assets/c768dd1b-3032-41d2-a062-b2af5b61c712" />
+
+
+Inertia - Measures the compactness of cluster by calculating the sum of squared distance between each point and its cluster center. 
+
+<img width="152" height="37" alt="image" src="https://github.com/user-attachments/assets/fed95226-033e-490c-a677-2fc5b9f712cd" />
+
+
+Adjusted Rand Index (ARI) - It measures the similarity between true labels and predicted clusters, adjusting of chance.
+
+		ARI = Index - Expected Index / Max Index - Expected Index
+
+Normalized mutual Information (NMI) - It measures how much information is shared between true labels and predicted clusters, normalized to account for varying cluster size. 
+
+<img width="98" height="26" alt="image" src="https://github.com/user-attachments/assets/9bc78330-647d-4005-99bb-3746b4e40346" />
+
+
+
+Purity - It measures how pure the clusters are by assigning each cluster to the class with the majority of points. 
+
+<img width="162" height="35" alt="image" src="https://github.com/user-attachments/assets/2e5dc09a-926c-4bc9-af26-d05e290b807a" />
+
+
+### Principle component analysis
+Is is use for dimensionality reduction. To simplify complex dataset into a smaller set of variables. 
+It helps us to remove number of feature from dataset while trying to keep the important patters and structure. 
+
+### Receiver operating character
+ROC Is a graphical representation used to evaluate the performance of binary classification model to show sensitivity (TPR - True positive rate) and specificity (False positive rate) across different threshold value. 
+	TPR - True positive\True positive + False negative      	
+	FPR - False positive\False positive + True negative
+
+### Area under curve
+AUC Is a single value that summarizes the performance of the classifier. It represents the probability that the classifier will rank. 
+AUC = 1 -> Perfect model 
+AUC = 0.5 -> Random classifier 
+AUC < 0.5 -> Worst model
