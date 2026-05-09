@@ -77,6 +77,14 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 [Diffusion Model vs GAN](#diffusion-model-vs-gan)
 
+[RNN vs LSTM vs GRU vs Transformer](#rnn-vs-lstm-vs-gru-vs-transformer)
+
+[Bernoulli Distribution vs Binomial Distribution](#bernoulli-distribution-vs-binomial-distribution)
+
+[Loss Function vs Cost Function](#loss-function-vs-cost-function)
+
+[Batch Gradient Descent vs Stochastic Gradient Descent](#batch-gradient-descent-vs-stochastic-gradient-descent)
+
 
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
@@ -785,3 +793,47 @@ A statistical measure that helps to understand the spread of data by forcing on 
 | Architecture | Single denoising network | Generator + Discriminator |
 | Output Quality | High realism with good diversity | Sharp outputs but less diverse |
 | Generation Speed | Slower | Faster |
+
+
+
+### RNN vs LSTM vs GRU vs Transformer
+
+| Aspect | RNN | LSTM | GRU | Transformer |
+|------|-----|------|-----|------------|
+| Full Form | Recurrent Neural Network | Long Short-Term Memory | Gated Recurrent Unit | Transformer |
+| Basic Structure | Simple recurrent structure with loops | Memory cells with input, forget, and output gates | Combines input and forget gates into an update gate | Attention-based architecture without recurrence |
+| Long-Term Dependency Handling | Struggles due to vanishing gradients | Excels at capturing long-term dependencies | Better than RNN but slightly less effective than LSTM | Effectively manages long sequences using self-attention |
+| Training Speed | Fast but less accurate on complex data | Slower due to multiple gates and memory operations | Faster than LSTM but slower than RNN | Computationally heavy but supports parallel training |
+| Memory Requirement | Low memory usage | High memory consumption due to complex architecture | Lower than LSTM but higher than RNN | Very high memory usage due to multi-head attention |
+| Parameter Count | Fewer parameters | More parameters due to gates and memory cells | Fewer parameters than LSTM | Large number of parameters in attention layers |
+| Parallelism | Limited due to sequential computation | Limited due to sequential processing | Limited due to sequential processing | High parallelism enabled by non-sequential design |
+| Performance on Long Sequences | Poor | Good | Moderate to good | Excellent |
+
+
+### Bernoulli Distribution vs Binomial Distribution
+
+| Aspect | Bernoulli Distribution | Binomial Distribution || Aspect | Bernoulli trial | Fixed number of trials (n) |
+| Possible Outcomes | Two outcomes (Success or Failure) | Counts number of successes |
+| What it Models | Result of a single experiment | Number of successes in n trials |
+| Parameters | One parameter: p (probability of success) | Two parameters: n (number of trials) and p (probability of success) |
+|------|------------------------|----------------------|
+
+
+### Loss Function vs Cost Function
+
+| Aspect | Loss Function | Cost Function |
+|------|--------------|---------------|
+| Scope | Error for a single data point | Error for the entire dataset |
+| What it Measures | Performance on one example | Performance across all examples |
+| Usage During Training | Used to adjust parameters for each data point | Used to evaluate overall model performance |
+| Computation | Calculated per sample | Aggregation (average/sum) of loss functions |
+
+
+### Batch Gradient Descent vs Stochastic Gradient Descent
+
+| Aspect | Batch Gradient Descent | Stochastic Gradient Descent |
+|------|------------------------|-----------------------------|
+| Data Usage | Uses all data points | Uses one data point at a time |
+| Speed | Slower for large datasets | Faster, especially for large datasets |
+| Memory Requirement | Requires high memory | Requires less memory |
+
