@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-| Concept | Concept | Concept |
+
 |---------|---------|---------|
 | [__init__ Method](#__init__-method) | [Access Modifiers](#access-modifiers) | [Aggregation](#aggregation) |
 | [Aggregation vs Composition](#aggregation-vs-composition) | [args and kwargs](#args-and-kwargs) | [Array](#array) |
@@ -46,121 +46,6 @@
 
 
 
-
-| Concept | Link | Category |
-|---------|------|----------|
-| NoneType | [#nonetype](#nonetype) | Data Types |
-| List | [#list](#list) | Data Types |
-| List Comprehension | [#list-comprehension](#list-comprehension) | Data Types |
-| Tuple | [#tuple](#tuple) | Data Types |
-| Range | [#range](#range) | Data Types |
-| Dictionary | [#dictionary](#dictionary) | Data Types |
-| Dictionary Comprehension | [#dictionary-comprehension](#dictionary-comprehension) | Data Types |
-| Set | [#set](#set) | Data Types |
-| Array | [#array](#array) | Data Types |
-| List vs Array | [#list-vs-array](#list-vs-array) | Comparisons |
-| List vs Tuple | [#list-vs-tuple](#list-vs-tuple) | Comparisons |
-| Map | [#map](#map) | Functions |
-| Filter | [#filter](#filter) | Functions |
-| Type Conversion vs Type Casting | [#type-conversion-vs-type-casting](#type-conversion-vs-type-casting) | Type Management |
-| Regular Expression | [#regular-expression](#regular-expression) | String Operations |
-| Pass | [#pass](#pass) | Control Flow |
-| Break | [#break](#break) | Control Flow |
-| Continue | [#continue](#continue) | Control Flow |
-| Function | [#function](#function) | Functions |
-| While Loop | [#while-loop](#while-loop) | Loops |
-| Exception Handling | [#exception-handling](#exception-handling) | Error Management |
-| Try-Except-Else-Finally | [#try-except-else-finally](#try-except-else-finally) | Error Management |
-| Class | [#class](#class) | OOP |
-| Object | [#object](#object) | OOP |
-| Parameter | [#parameter](#parameter) | OOP |
-| Lambda | [#lambda](#lambda) | Functions |
-| Dynamic Programming Language | [#dynamic-programming-language](#dynamic-programming-language) | Concepts |
-| del vs remove() | [#del-vs-remove](#del-vs-remove) | Comparisons |
-| Polymorphism | [#polymorphism](#polymorphism) | OOP |
-| Encapsulation | [#encapsulation](#encapsulation) | OOP |
-| Inheritance | [#inheritance](#inheritance) | OOP |
-| Inheritance Types | [#inheritance-types](#inheritance-types) | OOP |
-| Multithreading | [#multithreading](#multithreading) | Concurrency |
-| __init__ Method | [#__init__-method](#__init__-method) | OOP |
-| Thread | [#thread](#thread) | Concurrency |
-| Global Interpreter Lock | [#global-interpreter-lock](#global-interpreter-lock) | Concurrency |
-| Deadlock | [#deadlock](#deadlock) | Concurrency |
-| Memory Management | [#memory-management](#memory-management) | System |
-| Generators | [#generators](#generators) | Functions |
-| Garbage Collection | [#garbage-collection](#garbage-collection) | Memory Management |
-| Async | [#async](#async) | Concurrency |
-| Asyncio vs Multithreading | [#asyncio-vs-multithreading](#asyncio-vs-multithreading) | Comparisons |
-| Decorators | [#decorators](#decorators) | Advanced |
-| args and kwargs | [#args-and-kwargs](#args-and-kwargs) | Functions |
-| Self | [#self](#self) | OOP |
-| Module | [#module](#module) | Organization |
-| Package | [#package](#package) | Organization |
-| Library | [#library](#library) | Organization |
-| Why Sets Store Only Unique Objects | [#why-sets-store-only-unique-objects](#why-sets-store-only-unique-objects) | Data Types |
-| Shallow Copy | [#shallow-copy](#shallow-copy) | Advanced |
-| Deep Copy | [#deep-copy](#deep-copy) | Advanced |
-| Method Overriding vs Method Overloading | [#method-overriding-vs-method-overloading](#method-overriding-vs-method-overloading) | Comparisons |
-| @staticmethod | [#staticmethod](#staticmethod) | Decorators |
-| Getter and Setter | [#getter-and-setter](#getter-and-setter) | OOP |
-| Aggregation | [#aggregation](#aggregation) | OOP |
-| Composition | [#composition](#composition) | OOP |
-| Aggregation vs Composition | [#aggregation-vs-composition](#aggregation-vs-composition) | Comparisons |
-| Singleton Class | [#singleton-class](#singleton-class) | Design Patterns |
-| Super | [#super](#super) | OOP |
-| Reduce | [#reduce](#reduce) | Functions |
-| Overloading | [#overloading](#overloading) | OOP |
-| Private Methods | [#private-methods](#private-methods) | Encapsulation |
-| OAuth | [#oauth](#oauth) | Security |
-| Access Modifiers | [#access-modifiers](#access-modifiers) | OOP |
-| ChatGPT Architecture | [#chatgpt-architecture](#chatgpt-architecture) | AI/ML |
-| FastAPI | [#fastapi](#fastapi) | Web Framework |
-| Pydantic in FastAPI | [#pydantic-in-fastapi](#pydantic-in-fastapi) | Web Framework |
-| Route in FastAPI | [#route-in-fastapi](#route-in-fastapi) | Web Framework |
-| Async and Await in FastAPI | [#async-and-await-in-fastapi](#async-and-await-in-fastapi) | Web Framework |
-| Request and Response Objects | [#request-and-response-objects](#request-and-response-objects) | Web Framework |
-| Error Handling in FastAPI | [#error-handling-in-fastapi](#error-handling-in-fastapi) | Web Framework |
-| Schema in FastAPI | [#schema-in-fastapi](#schema-in-fastapi) | Web Framework |
-| CORS in FastAPI | [#cors-in-fastapi](#cors-in-fastapi) | Web Framework |
-| BaseModel in FastAPI | [#basemodel-in-fastapi](#basemodel-in-fastapi) | Web Framework |
-| FastAPI vs Flask | [#fastapi-vs-flask](#fastapi-vs-flask) | Comparisons |
-| WSGI vs ASGI | [#wsgi-vs-asgi](#wsgi-vs-asgi) | Web Protocols |
-| HTTP Methods | [#http-methods](#http-methods) | Web |
-| Flask | [#flask](#flask) | Web Framework |
-| WSGI | [#wsgi](#wsgi) | Web Protocols |
-| Routing in Flask | [#routing-in-flask](#routing-in-flask) | Web Framework |
-| Template Inheritance in Flask | [#template-inheritance-in-flask](#template-inheritance-in-flask) | Web Framework |
-| url_for in Flask | [#url_for-in-flask](#url_for-in-flask) | Web Framework |
-| File Uploading in Flask | [#file-uploading-in-flask](#file-uploading-in-flask) | Web Framework |
-| Flask-WTF | [#flask-wtf](#flask-wtf) | Web Framework |
-| Database Connections in Flask | [#database-connections-in-flask](#database-connections-in-flask) | Web Framework |
-| Thread-local Object in Flask | [#thread-local-object-in-flask](#thread-local-object-in-flask) | Web Framework |
-| Git | [#git](#git) | Version Control |
-| VCS (Version Control System) | [#vcs-version-control-system](#vcs-version-control-system) | Version Control |
-| .gitignore | [#gitignore](#gitignore) | Version Control |
-| Repository | [#repository](#repository) | Version Control |
-| Git Add | [#git-add](#git-add) | Git Commands |
-| Git Status | [#git-status](#git-status) | Git Commands |
-| Git Commit | [#git-commit](#git-commit) | Git Commands |
-| Git Push | [#git-push](#git-push) | Git Commands |
-| Git Pull | [#git-pull](#git-pull) | Git Commands |
-| Git Clone | [#git-clone](#git-clone) | Git Commands |
-| Git Fetch | [#git-fetch](#git-fetch) | Git Commands |
-| Git Checkout | [#git-checkout](#git-checkout) | Git Commands |
-| Conflict | [#conflict](#conflict) | Git Concepts |
-| Git Stash | [#git-stash](#git-stash) | Git Commands |
-| Git Apply | [#git-apply](#git-apply) | Git Commands |
-| Git Reset | [#git-reset](#git-reset) | Git Commands |
-| Git Revert | [#git-revert](#git-revert) | Git Commands |
-| Multiprocessing | [#multiprocessing](#multiprocessing) | Concurrency |
-| Multithreading vs Multiprocessing vs Async | [#multithreading-vs-multiprocessing-vs-async](#multithreading-vs-multiprocessing-vs-async) | Comparisons |
-| Semaphore | [#semaphore](#semaphore) | Concurrency |
-| Race Condition | [#race-condition](#race-condition) | Concurrency |
-| Mutex | [#mutex](#mutex) | Concurrency |
-| Interpreted Language | [#interpreted-language](#interpreted-language) | Concepts |
-| Ternary Operator | [#ternary-operator](#ternary-operator) | Operators |
-
----
 
 ## Data Types
 
