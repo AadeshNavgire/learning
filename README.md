@@ -93,7 +93,8 @@ Activation function decides whether a neuron should be active or not.
 It adds non‑linearity, helping the network learn complex patterns.
 Without it, a neural network would behave like linear regression.
 
-## Sigmoid  - A smooth S-shaped function that maps inputs to a range between 0 & 1, use for probability estimation. 
+### Sigmoid
+A smooth S-shaped function that maps inputs to a range between 0 & 1, use for probability estimation. 
 
 <img width="80" height="32" alt="image" src="https://github.com/user-attachments/assets/d8ccf227-0f60-4ef4-91d2-6a0b7137edfe" />
 
@@ -105,16 +106,19 @@ When to use - In the output layer of the binary classification model.
 Rarely used in hidden layers due to the vanishing gradient problem. 
 
 
-## tanh(Hyperbolic Tangent): A sigmoid like function that maps inputs to a range between -1 and 1 centered at zero for better convergence. 
+### tanh(Hyperbolic Tangent)
+A sigmoid like function that maps inputs to a range between -1 and 1 centered at zero for better convergence. 
 
-f(x) = tanh(x) = ex-e-xex+e-x
+<img width="141" height="33" alt="image" src="https://github.com/user-attachments/assets/e6578bb4-8d04-4b99-835c-f8fdc3a37d69" />
+
 
 Pros - Centered at zero which helps with faster convergence compared to sigmoid. Handles negative input better than sigmoid. 
 Cons - Sufferers from the vanishing gradient problem for large inputs, though less severe than sigmoid. 
 
 When to use - In hidden layer when input may have a mean close to zero. 
 
-## ReLU(Rectifier Linear Unit) - A simple piecewise linear function that output x if x> 0 and 0 otherwise introducing sparsity and computational efficiency. 
+### ReLU(Rectifier Linear Unit)
+A simple piecewise linear function that output x if x> 0 and 0 otherwise introducing sparsity and computational efficiency. 
 
 	f(x) = max(0,x)
 
@@ -130,9 +134,12 @@ Cons - Dying ReLU problem - Neurons can become permanently inactive for negative
 When to use - Default activation function for hidden layer in most DL architecture. 
 Works well for both convolutional and feedforward network. 
 
-## Softmax - Converts a vector of logits into a probability distribution, where each output lies between 0 and 1 and sums to 1. 
+### Softmax
+Converts a vector of logits into a probability distribution, where each output lies between 0 and 1 and sums to 1. 
 
-	f(x) = exij=1nexj
+<img width="82" height="41" alt="image" src="https://github.com/user-attachments/assets/d9196631-4b67-4f71-8f19-7889787ccf45" />
+
+	
 Pros: Suitable for multi class classification report. Output interpretable probabilities. 
 Cons: Not used in hidden layers. Sensitive to large values in input logics (May require normalization) 
 
