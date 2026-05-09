@@ -4,7 +4,7 @@
 [Generative AI](#generative-ai)
 
 
-Projects
+## Projects
 
 [TSP](#tsp)
 
@@ -21,9 +21,11 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 ## Machine learning
 
-[Linear regression](#linear-regression)  [Neural network](#neural-network)
+[Linear regression](#linear-regression)  
+[Neural network](#neural-network)
 [Weights](#weights)[Bias](#bias)
 [Working of a Neural Network](#working-of-a-neural-network)
+[Activation function](#activation-function)
 
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
@@ -71,11 +73,6 @@ The total input becomes:
 w × x + b
 Bias allows the neuron to give output even when input is zero.
 
-### Activation Function
-Activation function decides whether a neuron should be active or not.
-It adds non‑linearity, helping the network learn complex patterns.
-Without it, a neural network would behave like linear regression.
-
 ### Working of a Neural Network
 1. Input Layer
 Takes the input data and sends it to the next layer.
@@ -89,3 +86,58 @@ Applies activation function: a = activation(z)
 Gives the final result, such as:
 Classification (yes/no, cat/dog)
 Regression (price, score, value)
+
+
+### Activation Function
+Activation function decides whether a neuron should be active or not.
+It adds non‑linearity, helping the network learn complex patterns.
+Without it, a neural network would behave like linear regression.
+
+## Sigmoid  - A smooth S-shaped function that maps inputs to a range between 0 & 1, use for probability estimation. 
+
+<img width="80" height="32" alt="image" src="https://github.com/user-attachments/assets/d8ccf227-0f60-4ef4-91d2-6a0b7137edfe" />
+
+
+Pros - Good for output representing probabilities. Well suited for binary classification problem. 
+Cons - Vanishing Gradient problem - Gradients become very small for large/small input slowing training. Output not centered around zero, which can affect convergence. 
+
+When to use - In the output layer of the binary classification model. 
+Rarely used in hidden layers due to the vanishing gradient problem. 
+
+
+## tanh(Hyperbolic Tangent): A sigmoid like function that maps inputs to a range between -1 and 1 centered at zero for better convergence. 
+
+f(x) = tanh(x) = ex-e-xex+e-x
+
+Pros - Centered at zero which helps with faster convergence compared to sigmoid. Handles negative input better than sigmoid. 
+Cons - Sufferers from the vanishing gradient problem for large inputs, though less severe than sigmoid. 
+
+When to use - In hidden layer when input may have a mean close to zero. 
+
+## ReLU(Rectifier Linear Unit) - A simple piecewise linear function that output x if x> 0 and 0 otherwise introducing sparsity and computational efficiency. 
+
+	f(x) = max(0,x)
+
+Output range [0,)
+Shape: Linear for x>0, zero otherwise. 
+
+Pros - Simple and computationally efficient. 
+Avoids vanishing gradient problem for positive inputs.
+Prompts sparsity. 
+
+Cons - Dying ReLU problem - Neurons can become permanently inactive for negative inputs during training, leading to dead neurons. 
+
+When to use - Default activation function for hidden layer in most DL architecture. 
+Works well for both convolutional and feedforward network. 
+
+## Softmax - Converts a vector of logits into a probability distribution, where each output lies between 0 and 1 and sums to 1. 
+
+	f(x) = exij=1nexj
+Pros: Suitable for multi class classification report. Output interpretable probabilities. 
+Cons: Not used in hidden layers. Sensitive to large values in input logics (May require normalization) 
+
+When to use: Output layer for multi-class classification models. 
+
+The graphical representation is same as sigmodi, but softmax is use for multi-class classification. 
+
+Neural network regression specifically refers to neural network designed for regression task, with modification in the output layer and loss function to handle continues output. 
