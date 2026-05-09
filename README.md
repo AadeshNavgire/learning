@@ -69,6 +69,12 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 [Principle component analysis](#principle-component-analysis) [Receiver operating character](#receiver-operating-character) [Area under curve](#Area-under-curve)
 
+[Dropout](#dropout) [Backpropagation](#backpropagation) [Optimizers](#optimizers) [Batch normalization](#batch-normalization) [Time series](#time-series) [Prophet](#prophet) 
+
+[Max pooling](#max-pooling) [Mean Pooling](#mean-pooling) [Min Pooling](#min-pooling) [Padding](#padding)
+
+[Hyperparameter](#hyperparameter) [GAN](#gan) [VAE](#vae) [Latent space](#latent-space) [IQR method](#iqr-method)
+
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
 The main aim is to find the best‑fitting straight line (or hyperplane) that minimizes the difference between the predicted values and the actual values.
@@ -670,6 +676,8 @@ It helps us to remove number of feature from dataset while trying to keep the im
 
 ### Receiver operating character
 ROC Is a graphical representation used to evaluate the performance of binary classification model to show sensitivity (TPR - True positive rate) and specificity (False positive rate) across different threshold value. 
+
+
 		TPR - True positive\True positive + False negative 
 		
 		FPR - False positive\False positive + True negative
@@ -679,3 +687,90 @@ AUC Is a single value that summarizes the performance of the classifier. It repr
 AUC = 1 -> Perfect model 
 AUC = 0.5 -> Random classifier 
 AUC < 0.5 -> Worst model
+
+
+
+### Dropout
+Is a regularization used in NN to prevent overfitting. It make model more generalizable on unseen data by randomly “dropping out” a certain percentage of neuron during training(20-50%)
+Work- Imagine you have a neural network with 5 neurons in a layer. During training you have decided to use a dropout rate of 0.4 which means 40%. 
+In one training step neuron 1 and 4 might be dropped out and neuron 2,3,5 will be active. 
+In another tanning set neuron 2,3 will dropped off and neuron 1,4,5 will be active. 
+So this process makes the network learns to be robust and not overly depend on any particular neuron. 
+
+
+
+### Backpropagation
+It is a process in neural network which learns from its mistake and adjust internal parameter (weights and bias) to improve the performance. Its main agenda is to reduce error. 
+
+### Optimizers
+It is method use in neural network to adjust weight and biases of neural network during training to minimize the loss function. It use key component of gradient descent process. 
+
+Analogy between backpropagation and Optimizers:- Backpropagation is like a detective that investigate why the network made a mistake by computing gradients. 
+Optimizers is like the decision makers that decide how to fix the mistake by updating parameters. 
+
+### Batch normalization
+It normalize the inputs of each layer in neural network by adjusting and scaling activation. 
+
+### Time series
+A time series is a sequence of data points collected at regular intervals over time, where order matters. 
+
+Data points are ordered chronologically -> Each points depends on previous values -> Exhibihts patterns: trends
+
+
+### Prophet
+Prophet is a time series forecasting library by facebook that’s excellent for business time series data. 
+Prophet = Trend + Seasonality + Holiday Effects + Error
+
+Seasonality in Prophet: Seasonality is repeating patterns at fixed intervals. 
+Types of seasonality:
+Yearly seasonality - Pattern repeats every year (sales spike in Dec). If data >= 2 years
+Weekly seasonality - Patterns repeats every week (higher traffic on weekends) if data >= 2 weeks
+Daily seasonality - Pattern repeats every day (more call during business hours) if data >= 2 days
+
+
+### Dropout
+It is a regularization technique used in deep learning to reduce overfitting by randomly deactivating a fraction of neurons during training. It prevents the network from becoming overly reliant on specific neurons and encourages more robust feature learning. 
+
+
+### Max pooling
+This operation selects the maximum value from the region of the feature map covered by the filter. It is useful when the goal is to identify the most prominent features, such as edges, textures. 
+
+### Mean Pooling
+This operation computes the average value of the elements in the region of the feature map covered by the filter. It provides a more generalized representation of the input and is useful when preserving the overall context is important. 
+
+### Min Pooling
+This operations selects the minimum value from the region of the feature map covered by the filter. It is useful when the goal is to identify the least prominent features. 
+
+### Padding
+Is the process of adding extra values around data to control the shape of inputs and preserver important information during processing. It is used to preserve the spatial dimensions of the input image after convolution operations on feature map. 
+Valid padding: No padding is added, output size decrease after convolution. 
+Same padding: Padding is added so that output size matches input size. 
+Zero padding: Most common, where zeros are added round the boarded. 
+
+
+### Hyperparameter
+It is essential for defining the behavior and performance of ML modes. By casefully tuning these hyperparameters, we can optimize their model by preventing overfitting, underfitting and achieve better predictive performance. 
+
+### GAN
+GAN consist of two competing neural networks in an adversarial framework. It work on two neural networks as generator and discriminator. 
+Generator: Creates fake data samples from random noise. 
+Discriminator: Evaluates if samples are real or fake. Both improve iteratively through completion. 
+Result: High-quality realistic synthetic data generation. 
+Equilibrium: Ideally reaches state where D can’t distinguish. 
+
+
+### VAE
+A variational autoencoder is a generative models that learns a probabilistic latent space to generate new data. 
+It uses an encore to map input data into a latent distribution defined by mean and variance, and a decoder to reconstruct data from sample latent vectors. 
+VAEs are trained using a combined loss function consisting of reconstruction loss and KL divergence which regularizes the latent space. 
+This enables smooth interpolation and controlled data generation. 
+
+### Latent space
+Is a compressed, continuous representation of data where each point encodes meaningful features learned by a generative model to create new sample.
+Latent space: Enables generation of new, realistic samples. Captures semantic structure of data. Allows smooth interpolation between outputs. Supports controlled generation. Improves generalization and diversity. 
+
+
+
+### IQR method
+A statistical measure that helps to understand the spread of data by forcing on the middle 50% of a dataset. It calculated as the difference between third quartile (Q3) and the first quartile (Q1) using IQR = Q3-Q1
+
