@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-
+| Concept | Concept | Concept |
 |---------|---------|---------|
 | [__init__ Method](#__init__-method) | [Access Modifiers](#access-modifiers) | [Aggregation](#aggregation) |
 | [Aggregation vs Composition](#aggregation-vs-composition) | [args and kwargs](#args-and-kwargs) | [Array](#array) |
