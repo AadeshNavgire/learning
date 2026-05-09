@@ -22,10 +22,23 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 ## Machine learning
 
 [Linear regression](#linear-regression)  
+
 [Neural network](#neural-network)
+
 [Weights](#weights)[Bias](#bias)
+
 [Working of a Neural Network](#working-of-a-neural-network)
+
 [Activation function](#activation-function)
+
+[Normal distribution/Gaussian distribution](#normal-distribution/gaussian-distribution)
+
+[Bernoulli distribution](#bernoulli-distribution)
+
+[Binomial distribution](#binomial-distribution)
+
+[LSTM](#lstm)
+
 
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
@@ -151,3 +164,32 @@ When to use: Output layer for multi-class classification models.
 The graphical representation is same as sigmodi, but softmax is use for multi-class classification. 
 
 Neural network regression specifically refers to neural network designed for regression task, with modification in the output layer and loss function to handle continues output. 
+
+
+### Normal distribution/Gaussian distribution
+It is a probability distribution that describes how data is distributed in a symmetric. 
+
+Application:  1) Gaussian Navie bays classifier. 
+2) Linear regression
+3) Data normalization 
+
+### Bernoulli distribution
+It is probability distribution which is used where out dataset contain yes, no or 0 or 1 or success or failure term. 
+
+	p(success) = p
+	p(failure) = 1-p
+
+### Binomial distribution
+It is a generalized distribution to multiple trials, it is a number of successes in a fixed number of independent trails. 
+
+Bernouli distribution vs Binomial distribution
+
+It has only one trail vs It has number of trails
+
+Two outcome vs Number of success in n trails
+
+One parameter p(probability of success) vs Two parameters n (number of trails) & p (probability of success) 
+
+### LSTM (Long Short‑Term Memory) 
+is a type of recurrent neural network (RNN) that can learn and remember information over long sequences.
+It uses special gates to decide what information to remember, update, or forget, making it useful for tasks like time series, speech, and text prediction
