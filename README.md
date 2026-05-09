@@ -75,6 +75,9 @@ This is a Multi-Agent Document Generation System built using LangGraph. The syst
 
 [Hyperparameter](#hyperparameter) [GAN](#gan) [VAE](#vae) [Latent space](#latent-space) [IQR method](#iqr-method)
 
+[Diffusion Model vs GAN](#diffusion-model-vs-gan)
+
+
 ### Linear Regression
 Is used to predict a continuous target variable based on a linear relationship between the target variable and one or more predictor variables.
 The main aim is to find the best‑fitting straight line (or hyperplane) that minimizes the difference between the predicted values and the actual values.
@@ -774,3 +777,11 @@ Latent space: Enables generation of new, realistic samples. Captures semantic st
 ### IQR method
 A statistical measure that helps to understand the spread of data by forcing on the middle 50% of a dataset. It calculated as the difference between third quartile (Q3) and the first quartile (Q1) using IQR = Q3-Q1
 
+### Diffusion Model vs GAN
+
+| Aspect | Diffusion Model | GAN |
+|------|-----------------|-----|
+| Data Generation Method | Generate data by gradually removing noise | Generate data via adversarial competition |
+| Architecture | Single denoising network | Generator + Discriminator |
+| Output Quality | High realism with good diversity | Sharp outputs but less diverse |
+| Generation Speed | Slower | Faster |
