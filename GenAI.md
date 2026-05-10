@@ -52,7 +52,7 @@
 | [User Centric Memory](#user-centric-memory) | [Vector Database](#vector-database) | [Vector Database Evaluation](#vector-database-evaluation) |
 | [Vector Database Indexing Strategies](#vector-database-indexing-strategies) | [Weaviate Features](#weaviate-features) | [Weaviate Property Level Indexing](#weaviate-property-level-indexing) |
 | [Working Memory](#working-memory) | [Zero Shot Prompting](#zero-shot-prompting) | [Indexing Types in Weaviate](#indexing-types-in-weaviate) |
-| [Fine‑tuning vs Quantization vsDistillation](#Fine‑tuning-vs-quantization-vs-distillation) | |
+| [Fine‑tuning vs Quantization vs Distillation](#fine‑tuning-vs-quantization-vs-distillation) | |
 
 ---
 
