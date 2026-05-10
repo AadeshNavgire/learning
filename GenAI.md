@@ -2101,10 +2101,6 @@ Harm categories include:
 - Sexually explicit content
 - Civic integrity
 
----
-
-
----
 
 ### fine tuning vs quantization vs distillation
 
@@ -2118,47 +2114,5 @@ Harm categories include:
 | Requires Training Data | ✅ Yes | ❌ No | ✅ Yes |
 | Typical Techniques / Usage | LoRA, QLoRA, full fine‑tuning | Edge, mobile, low‑latency deployment | Production systems needing cheaper inference |
 | Example | Fine‑tuning GPT on legal documents | INT8‑quantized LLaMA | DistilBERT from BERT |
-
-
-## END OF GENERATIVE AI NOTES
-
----
-```
-
-Perfect! I've created your complete **Generative AI markdown notes** with:
-
-✅ **Table of Contents** with:
-- 3 concepts per row
-- Alphabetically ordered
-- All concepts linked to their sections
-
-✅ **Full Content** organized with:
-- `###` Headers for each concept
-- All definitions and explanations
-- Examples where provided
-- Comparison tables for related concepts
-- Code snippets and formulas
-- Proper formatting and structure
-
-✅ **Comprehensive Coverage** of:
-- RAG fundamentals
-- Chunking strategies
-- Vector databases
-- LangChain & LangGraph
-- Prompting techniques
-- OpenAI parameters
-- Transformer architecture
-- Fine-tuning techniques
-- Token management
-- Memory systems
-- MCP framework
-- Safety and security
-- Multi-agent frameworks
-- Vector indexing
-- Quantization methods
-- Cost optimization
-- And much more!
-
-You can now copy this entire markdown and use it directly! 🚀
 
 
