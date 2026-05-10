@@ -52,6 +52,7 @@
 | [User Centric Memory](#user-centric-memory) | [Vector Database](#vector-database) | [Vector Database Evaluation](#vector-database-evaluation) |
 | [Vector Database Indexing Strategies](#vector-database-indexing-strategies) | [Weaviate Features](#weaviate-features) | [Weaviate Property Level Indexing](#weaviate-property-level-indexing) |
 | [Working Memory](#working-memory) | [Zero Shot Prompting](#zero-shot-prompting) | [Indexing Types in Weaviate](#indexing-types-in-weaviate) |
+| [Fine‑tuning vs Quantization vsDistillation](#Fine‑tuning-vs-quantization-vs-distillation) | |
 
 ---
 
@@ -2102,6 +2103,23 @@ Harm categories include:
 
 ---
 
+
+---
+
+### Fine‑tuning vs Quantization vs Distillation
+
+| Aspect | Fine‑tuning | Quantization | Distillation |
+|------|------------|--------------|--------------|
+| Simple Meaning | Makes the model smarter | Makes the model smaller | Makes the model faster and cheaper |
+| What it Does | Trains a pre‑trained model further on new data | Reduces numerical precision of model weights | Trains a smaller model to mimic a large model |
+| Primary Goal | Improve task or domain performance | Reduce model size and speed up inference | Reduce model size while retaining performance |
+| Changes Model Knowledge | ✅ Yes | ❌ No | ❌ No |
+| Effect on Accuracy | ✅ Improves accuracy for target task | ⚠️ Slight accuracy drop possible | ⚠️ Slight accuracy drop compared to teacher |
+| Requires Training Data | ✅ Yes | ❌ No | ✅ Yes |
+| Typical Techniques / Usage | LoRA, QLoRA, full fine‑tuning | Edge, mobile, low‑latency deployment | Production systems needing cheaper inference |
+| Example | Fine‑tuning GPT on legal documents | INT8‑quantized LLaMA | DistilBERT from BERT |
+
+
 ## END OF GENERATIVE AI NOTES
 
 ---
@@ -2142,3 +2160,5 @@ Perfect! I've created your complete **Generative AI markdown notes** with:
 - And much more!
 
 You can now copy this entire markdown and use it directly! 🚀
+
+
