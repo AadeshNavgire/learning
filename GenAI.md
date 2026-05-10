@@ -2106,7 +2106,7 @@ Harm categories include:
 
 ---
 
-### Fine‑tuning vs Quantization vs Distillation
+### fine tuning vs quantization vs distillation
 
 | Aspect | Fine‑tuning | Quantization | Distillation |
 |------|------------|--------------|--------------|
